@@ -48,10 +48,9 @@ h2 {
 
 /* Carousels*/
 .carousel-inner {
-    background-color: rgba(0, 0, 0, 1);
-    border: 2px solid #000;
+    background-color: rgb(226, 225, 225);
+    border-radius: 20px;
 }
-
 @media only screen and (max-width: 1600px){
     .photo-size {
         width: auto;

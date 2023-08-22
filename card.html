@@ -50,9 +50,12 @@
   <h2 style="color: rgb(202, 20, 20);">Wishes from Madhu Paps!!!</h2>
   <p style="color: rgb(202, 20, 20);">Confused what is this ? *PERSONAL MESSAGE ALERT* </p>
   <p style="color: rgb(202, 20, 20);">I have sent u a gif today what's the name of the cartoon ?</p>
-  <input type="text" />
+  <form return false;>
+  <input type="text" id="InputField" required style="padding: 6px;" />
   <a href="https://capitalizemytitle.com/morse-code-translator/" target="_blank">
-  <button>Decode here</button>
+  <button onclick="myFunction()">Decode here</button>
+  <p id="demo"></p>
+</form>
   </a>
 <br> <br> <br>
 <div class="polaroid">
@@ -65,6 +68,24 @@
 </div>
 </div>
 <script  src="js/index.js"></script>
+<script>
+  function myFunction() {
+    event.preventDefault();
+     const txt = document.getElementById("InputField").value;
+     console.log(txt);
+     const txtLen = txt.length;
+     console.log(txtLen);
+     if (txtLen<3) {
+        alert("Validation lam potruka maten nenaikuringala...olunga type panunga!")
+     } else if(txtLen != 6){
+        alert("Olunga yena gif nu pathutu panunga..")
+     }else {
+        // alert("gud");
+        document.getElementById("demo").innerHTML = "😁Gud boy, now Ctrl+C & Ctrl+V the code on ur left here https://capitalizemytitle.com/morse-code-translator/";
+     }
+     return false;
+  }
+</script>
 
 </body>
 </html>
